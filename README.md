@@ -2,6 +2,10 @@
 
 - 📖 [Remix docs](https://remix.run/docs)
 
+```shellscript
+npx create-remix@latest --template dhanush-git/dreampop-stack
+```
+
 ## Development
 
 Run the dev server:
