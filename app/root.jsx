@@ -6,6 +6,10 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import '@shopify/polaris/build/esm/styles.css';
+import enTranslations from '@shopify/polaris/locales/en.json';
+import {AppProvider} from '@shopify/polaris';
+
 export function Layout({ children }) {
   return (
     <html lang="en">
@@ -16,9 +20,11 @@ export function Layout({ children }) {
         <Links />
       </head>
       <body>
-        {children}
-        <ScrollRestoration />
-        <Scripts />
+        <AppProvider i18n={enTranslations}>
+          {children}
+          <ScrollRestoration />
+          <Scripts />
+        </AppProvider>
       </body>
     </html>
   );
